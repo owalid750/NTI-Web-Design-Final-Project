@@ -8,12 +8,13 @@ export async function getProducts() {
         let products = await response.json();
         // console.log(products.products.filter(item => item.category !== "beauty").length);
         return products.products.filter(item => item.category !== "beauty");
-
     } catch (error) {
         console.log(error.message);
         return [];
     }
 }
+
+
 
 
 export async function getProductById(productId) {

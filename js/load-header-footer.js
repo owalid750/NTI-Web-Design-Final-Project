@@ -21,7 +21,7 @@ export function loadHeader() {
     document.getElementById("header").innerHTML = `<nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
         <a class="navbar-brand" href="index.html">
-            <img src="imgs/logomain.png" alt="ShopEase Logo" class="logo" />
+            <img src="imgs/logomain.png" alt="e-Store Logo" class="logo" />
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main"
@@ -72,14 +72,14 @@ export function loadFooter() {
         <div class="row">
             <div class="col-md-6 col-lg-4">
                 <div class="info mb-5">
-                    <img src="imgs/logomain.png" alt="ShopEase Logo" class="logo" />
+                    <img src="imgs/logomain.png" alt="e-Store Logo" class="logo" />
                     <p class="mb-5">
-                        ShopEase is your ultimate online destination for quality products at unbeatable prices.
+                        e-Store is your ultimate online destination for quality products at unbeatable prices.
                         Start shopping today and experience the joy of convenience!
                     </p>
                     <div class="copyright">
                         Created By <span>تيم القاضية</span>
-                        <div>&copy; 2024 - <span>ShopEase Inc</span></div>
+                        <div>&copy; 2024 - <span>e-Store</span></div>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@ export function loadFooter() {
                     <h5 class="text-light">Customer Support</h5>
                     <p class="lh-lg mt-3 mb-5">Have questions? Our team is here to assist you. Reach out via email
                         or phone.</p>
-                    <a class="btn rounded-pill main-btn w-100" href="#">support@shopease.com</a>
+                    <a class="btn rounded-pill main-btn w-100" href="#">support@e-Store.com</a>
                     <ul class="d-flex mt-5 list-unstyled gap-3">
                         <li>
                             <a class="d-block text-light" href="#"><i
@@ -137,5 +137,19 @@ export function loadFooter() {
         </div>
     </div>
 </div>
+    `
+}
+
+export function loadMaintainanceAlert() {
+    document.getElementById("maintainance-alert").innerHTML = `
+   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Important Notice:</strong> We are currently making some changes to the Firestore database. You can test
+        the login using the following credentials:
+        <div class="mt-2">
+            <strong>Email:</strong> <b>waleed@gmail.com</b><br>
+            <strong>Password:</strong> <b>123456</b>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
     `
 }

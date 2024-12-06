@@ -209,7 +209,7 @@ body {
 
 /* Hover Animation */
 .card-img-top:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   /* Zoom effect on hover */
 }
 
@@ -249,3 +249,123 @@ body {
 }
 
 /* End Footer */
+
+/* 
+
+*/
+
+.card-maged {
+  position: relative;
+  background: linear-gradient(to bottom, #d1c4e9, #7b63a7);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-maged-image {
+  width: 50%;
+  padding: 20px 30px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-maged-image img {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card-maged-image:hover img {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.card-maged-details {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-maged-details h2 {
+  font-size: 2rem;
+  margin: 0;
+  color: #333;
+}
+
+.card-maged-details .model {
+  color: #555;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.card-maged-details .description {
+  margin: 15px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #000;
+  margin: 20px 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-top: 40px; /* Extra space above button */
+}
+
+.actions .add-to-cart {
+  background: linear-gradient(90deg, #673ab7, #512da8);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.actions .add-to-cart:hover {
+  background: linear-gradient(90deg, #512da8, #311b92);
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.actions .add-to-cart:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ff1744;
+}

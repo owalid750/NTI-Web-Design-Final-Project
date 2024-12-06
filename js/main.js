@@ -1,4 +1,4 @@
-import { loadHeader, loadFooter } from "./load-header-footer.js";
+import { loadHeader, loadFooter, loadMaintainanceAlert } from "./load-header-footer.js";
 import { signUp, signIn, checkUserStatus } from "./auth.js";
 import { getProducts, getProductById } from "./api.js";
 import { addToCart, renderCartItems, updateCartCount } from "./cart.js";
@@ -9,7 +9,11 @@ loadHeader();
 checkUserStatus();
 /* update car count in each time after load header  */
 updateCartCount();
+/* Load Maintainance Alert */
 
+if (document.getElementById("maintainance-alert")) {
+    loadMaintainanceAlert();
+}
 /* Start Handle Register */
 if (window.location.pathname.endsWith("register.html")) {
     document.getElementById('signupForm').addEventListener('submit', function (e) {
@@ -104,6 +108,8 @@ if (window.location.pathname.endsWith("index.html")) {
         let productsDiv = document.getElementById("products");
         productsDiv.innerHTML = '';
         const allProducts = await getProducts();
+        console.log("welcoem");
+
         let products = [...allProducts]; // Copy the original list for dynamic updates
 
 
@@ -182,7 +188,7 @@ if (window.location.pathname.endsWith("index.html")) {
 /* End products Section */
 
 /* Start Display product Details */
-async function showProductDetails(productId) { 
+async function showProductDetails(productId) {
     try {
         const modalBody = document.querySelector(".modal-body");
         let product = await getProductById(productId);
@@ -235,3 +241,4 @@ if (window.location.pathname.endsWith("cart.html")) {
 loadFooter();
 
 
+// test
